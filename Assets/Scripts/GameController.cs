@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     private Vector2 playerStartingPos;
     private GameObject[] hazards;
     private GameObject[] checkpoints;
+    private GameObject[] endpoints;
     private GameObject player;
 
     // Start is called before the first frame update
@@ -24,6 +25,8 @@ public class GameController : MonoBehaviour
         hazards = GameObject.FindGameObjectsWithTag("InstantDeath");
 
         checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");
+
+        endpoints = GameObject.FindGameObjectsWithTag("Endpoint");
     }
 
     // Update is called once per frame
@@ -47,6 +50,16 @@ public class GameController : MonoBehaviour
                 //TODO checkpoint animation
 
                 playerStartingPos = Pos2d(checkpoint);
+            }
+        }
+
+        foreach(GameObject endpoint in endpoints)
+        {
+            if (Vector2.Distance(Pos2d(player), Pos2d(endpoint)) < 1)
+            {
+                //TODO endgame animation
+
+                Debug.Log("You won the game");
             }
         }
     }
