@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
 
     private Vector2 playerStartingPos;
     private GameObject[] hazards;
+    private GameObject[] checkpoints;
     private GameObject player;
 
     // Start is called before the first frame update
@@ -21,20 +22,13 @@ public class GameController : MonoBehaviour
         }
 
         hazards = GameObject.FindGameObjectsWithTag("InstantDeath");
+
+        checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(player != null)
-        {
-            Debug.Log("PLAYER FOUND");
-        }
-        
-        if(hazards.Length > 0)
-        {
-            Debug.Log("HAZARDS FOUND");
-        }
 
         foreach(GameObject hazard in hazards)
         {
@@ -43,10 +37,16 @@ public class GameController : MonoBehaviour
                 //TODO death screen graphics
 
                 player.transform.position = playerStartingPos;
-                Debug.Log("hazard pos:" + Pos2d(hazard));
-                Debug.Log("player pos:" + Pos2d(player));
-                Debug.Log(Vector2.Distance(Pos2d(player), Pos2d(hazard)));
-                Debug.Log("   ");
+            }
+        }
+
+        foreach(GameObject checkpoint in checkpoints)
+        {
+            if(Vector2.Distance(Pos2d(player), Pos2d(checkpoint)) < 1)
+            {
+                //TODO checkpoint animation
+
+                playerStartingPos = Pos2d(checkpoint);
             }
         }
     }
