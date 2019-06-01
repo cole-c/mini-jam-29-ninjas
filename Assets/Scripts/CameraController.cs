@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public GameObject playerGO;
+    public GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(playerGO.transform.position.x + 4, playerGO.transform.position.y, -10);
+        if(player != null)
+        {
+            transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -15);
+        } else
+        {
+            Debug.Log("Your Camera is messed up because you don't have a tagged Player");
+        }
+        
     }
 }
