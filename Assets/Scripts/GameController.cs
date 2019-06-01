@@ -32,7 +32,6 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         foreach(GameObject hazard in hazards)
         {
             if (Vector2.Distance(Pos2d(player), Pos2d(hazard)) < deathRadius)
@@ -64,10 +63,8 @@ public class GameController : MonoBehaviour
         }
     }
 
-    private Vector2 Pos2d(GameObject thing)
+    public static Vector2 Pos2d(GameObject thing)
     {
         return new Vector2(thing.transform.position.x, thing.transform.position.y);
     }
-
-
 }
