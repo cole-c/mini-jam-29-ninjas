@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
+
     public GameObject player;
+
+    public int offset = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -15,9 +18,10 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if(player != null)
         {
-            transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -15);
+            transform.position = new Vector3(player.transform.position.x + offset, player.transform.position.y, -15);
         } else
         {
             Debug.Log("Your Camera is messed up because you don't have a tagged Player");
