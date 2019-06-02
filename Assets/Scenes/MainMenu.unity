@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: -37}
+  m_AnchoredPosition: {x: 0, y: -37}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &496062696
@@ -302,7 +302,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 243.1, y: 50.3}
+  m_SizeDelta: {x: 247.2, y: 50.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &699381212
 MonoBehaviour:
@@ -356,6 +356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1097655207}
   - component: {fileID: 1097655208}
+  - component: {fileID: 1097655209}
   m_Layer: 0
   m_Name: Idle_Ninja
   m_TagString: Untagged
@@ -425,6 +426,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!222 &1097655209
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097655206}
+  m_CullTransparentMesh: 0
 --- !u!1 &1217943854
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,6 +444,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1217943855}
   - component: {fileID: 1217943856}
+  - component: {fileID: 1217943857}
   m_Layer: 0
   m_Name: MultiTierSpotLightV2
   m_TagString: Untagged
@@ -504,6 +514,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!222 &1217943857
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217943854}
+  m_CullTransparentMesh: 0
 --- !u!1 &1222756023
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,10 +877,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 960, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -881,7 +899,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
