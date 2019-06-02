@@ -132,6 +132,11 @@ public class GameController : MonoBehaviour
         return !dead;
     }
 
+    public static void playerKilled()
+    {
+        dead = true;
+    }
+
     public static Vector2 getRespawnPoint()
     {
         return playerRespawnPos;

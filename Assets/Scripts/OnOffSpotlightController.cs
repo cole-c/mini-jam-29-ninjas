@@ -48,7 +48,7 @@ public class OnOffSpotlightController : MonoBehaviour
     {
         if (lightIsOn == true)
         {
-            player.transform.position = GameController.getRespawnPoint();
+            GameController.playerKilled();
         }
     }
 }
