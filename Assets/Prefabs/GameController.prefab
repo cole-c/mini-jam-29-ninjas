@@ -44,3 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathRadius: 1
+  inactiveCheckpointSprite: {fileID: 21300000, guid: 096c4ab8819f76a4ab0c35541f9456a8,
+    type: 3}
+  activeCheckpointSprite: {fileID: 21300000, guid: 7feb00204db992d4bb8348227d00c2e1,
+    type: 3}

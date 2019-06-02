@@ -13,6 +13,10 @@ public class GameController : MonoBehaviour
     private GameObject[] checkpoints;
     private GameObject[] endpoints;
     private GameObject player;
+    private GameObject activeCheckPoint;
+
+    public Sprite inactiveCheckpointSprite;
+    public Sprite activeCheckpointSprite;
 
     private static bool dead = false;
     private static bool winner = false;
@@ -54,9 +58,15 @@ public class GameController : MonoBehaviour
             {
                 if (Vector2.Distance(Pos2d(player), Pos2d(checkpoint)) < 1)
                 {
-                    //TODO checkpoint animation
-
                     playerRespawnPos = Pos2d(checkpoint);
+
+                    activeCheckPoint = checkpoint;
+                    checkpoint.GetComponent<SpriteRenderer>().sprite = activeCheckpointSprite;
+                }
+
+                if(checkpoint != activeCheckPoint)
+                {
+                    checkpoint.GetComponent<SpriteRenderer>().sprite = inactiveCheckpointSprite;
                 }
             }
         }
