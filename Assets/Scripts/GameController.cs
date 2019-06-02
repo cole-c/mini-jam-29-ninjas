@@ -31,36 +31,47 @@ public class GameController : MonoBehaviour
         checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");
 
         endpoints = GameObject.FindGameObjectsWithTag("Endpoint");
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        foreach (GameObject hazard in hazards)
+        if(hazards != null)
         {
-            if (Vector2.Distance(Pos2d(player), Pos2d(hazard)) < deathRadius)
+            foreach (GameObject hazard in hazards)
             {
-                dead = true;
+                if (Vector2.Distance(Pos2d(player), Pos2d(hazard)) < deathRadius)
+                {
+                    dead = true;
+                }
             }
         }
 
-        foreach (GameObject checkpoint in checkpoints)
+        if (checkpoints != null)
         {
-            if (Vector2.Distance(Pos2d(player), Pos2d(checkpoint)) < 1)
+            foreach (GameObject checkpoint in checkpoints)
             {
-                //TODO checkpoint animation
+                if (Vector2.Distance(Pos2d(player), Pos2d(checkpoint)) < 1)
+                {
+                    //TODO checkpoint animation
 
-                playerRespawnPos = Pos2d(checkpoint);
+                    playerRespawnPos = Pos2d(checkpoint);
+                }
             }
         }
 
-        foreach (GameObject endpoint in endpoints)
+        if(endpoints != null)
         {
-            if (Vector2.Distance(Pos2d(player), Pos2d(endpoint)) < 1)
+            foreach (GameObject endpoint in endpoints)
             {
-                winner = true;
+                if (Vector2.Distance(Pos2d(player), Pos2d(endpoint)) < 1)
+                {
+                    winner = true;
+                }
             }
         }
+
     }
 
     public static Vector2 Pos2d(GameObject thing)
