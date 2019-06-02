@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
 
     private static Vector2 playerRespawnPos;
     private Vector2 playerStartPos;
-    private GameObject[] hazards;
+    private static GameObject[] hazards;
     private GameObject[] checkpoints;
     private GameObject[] endpoints;
     private GameObject player;
@@ -41,7 +41,8 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(hazards != null)
+        hazards = GameObject.FindGameObjectsWithTag("InstantDeath");
+        if (hazards != null)
         {
             foreach (GameObject hazard in hazards)
             {
@@ -151,4 +152,5 @@ public class GameController : MonoBehaviour
     {
         return playerRespawnPos;
     }
+
 }
