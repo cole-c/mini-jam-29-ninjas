@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour
 
     public float deathRadius = 1f;
 
-    private Vector2 playerRespawnPos;
+    private static Vector2 playerRespawnPos;
     private Vector2 playerStartPos;
     private GameObject[] hazards;
     private GameObject[] checkpoints;
@@ -130,5 +130,10 @@ public class GameController : MonoBehaviour
             return false;
         }
         return !dead;
+    }
+
+    public static Vector2 getRespawnPoint()
+    {
+        return playerRespawnPos;
     }
 }

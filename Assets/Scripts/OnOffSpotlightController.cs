@@ -11,17 +11,12 @@ public class OnOffSpotlightController : MonoBehaviour
     public Sprite onSprite;
 
     GameObject player;
-    Vector2 playerStartingPos;
     SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null)
-        {
-            playerStartingPos = GameController.Pos2d(player);
-        }
         spriteRenderer = GetComponent<SpriteRenderer>();
         InvokeRepeating("lightswitch", startDelay, onOffFrequency);
     }
@@ -53,7 +48,7 @@ public class OnOffSpotlightController : MonoBehaviour
     {
         if (lightIsOn == true)
         {
-            player.transform.position = playerStartingPos;
+            player.transform.position = GameController.getRespawnPoint();
         }
     }
 }
