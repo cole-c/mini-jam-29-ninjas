@@ -33,6 +33,13 @@ public class Player : MonoBehaviour
             vertical *= moveLimiter;
         }
 
-        body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+        if (GameController.isAlive())
+        {
+            body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+        }
+        else
+        {
+            body.velocity = new Vector2(0, 0);
+        }
     }
 }

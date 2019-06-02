@@ -32,7 +32,7 @@ public class LightControllerScript : MonoBehaviour
         //check our distance to the current waypoint, Are we near enough?
         if (direction.magnitude < distance)
         {
-            if (counter < Waypoints.Length - 1) //switch to the nex waypoint if exists
+            if (counter < Waypoints.Length - 1) //switch to the next waypoint if exists
             {
                 counter++;
             }
@@ -42,8 +42,20 @@ public class LightControllerScript : MonoBehaviour
             }
         }
 
-        direction = direction.normalized;
-        Vector3 dir = direction;
-        GetComponent<Rigidbody2D>().velocity = new Vector2(direction.x * actualSpeed, direction.y * actualSpeed);
+    }
+
+    //Like update but for physics
+    private void FixedUpdate()
+    {
+        if (GameController.isAlive())
+        {
+            direction = direction.normalized;
+            Vector3 dir = direction;
+            GetComponent<Rigidbody2D>().velocity = new Vector2(direction.x * actualSpeed, direction.y * actualSpeed);
+        }
+        else
+        {
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        }
     }
 }
