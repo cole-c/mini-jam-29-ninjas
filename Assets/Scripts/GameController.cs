@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
 
-    public float deathRadius = 1f;
+    public float deathRadius = .5f;
 
     private static Vector2 playerRespawnPos;
     private Vector2 playerStartPos;
