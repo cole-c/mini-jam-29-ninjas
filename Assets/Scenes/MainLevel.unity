@@ -345,7 +345,7 @@ PrefabInstance:
     - target: {fileID: 4908840108989545922, guid: d791e0b75a7a86645b1ddbcab94164aa,
         type: 3}
       propertyPath: deathRadius
-      value: 0.1
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d791e0b75a7a86645b1ddbcab94164aa, type: 3}

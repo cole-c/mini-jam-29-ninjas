@@ -357,6 +357,7 @@ GameObject:
   - component: {fileID: 1097655207}
   - component: {fileID: 1097655208}
   - component: {fileID: 1097655209}
+  - component: {fileID: 1097655210}
   m_Layer: 0
   m_Name: Idle_Ninja
   m_TagString: Untagged
@@ -434,6 +435,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097655206}
   m_CullTransparentMesh: 0
+--- !u!95 &1097655210
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097655206}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1fae0eba7a25b8c47a469e6f3f3ce860, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1149024028 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8931669637737515119, guid: b5a383ca9689d8d4691d8ee2ea4ccfa0,
@@ -1068,6 +1088,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 8931669637737515116, guid: b5a383ca9689d8d4691d8ee2ea4ccfa0,
+        type: 3}
+      propertyPath: orthographic size
+      value: 317.43207
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931669637737515116, guid: b5a383ca9689d8d4691d8ee2ea4ccfa0,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931669637737515116, guid: b5a383ca9689d8d4691d8ee2ea4ccfa0,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931669637737515116, guid: b5a383ca9689d8d4691d8ee2ea4ccfa0,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8931669637737515155, guid: b5a383ca9689d8d4691d8ee2ea4ccfa0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1121,26 +1161,6 @@ PrefabInstance:
     - target: {fileID: 8931669637737515155, guid: b5a383ca9689d8d4691d8ee2ea4ccfa0,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8931669637737515116, guid: b5a383ca9689d8d4691d8ee2ea4ccfa0,
-        type: 3}
-      propertyPath: orthographic size
-      value: 317.43207
-      objectReference: {fileID: 0}
-    - target: {fileID: 8931669637737515116, guid: b5a383ca9689d8d4691d8ee2ea4ccfa0,
-        type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8931669637737515116, guid: b5a383ca9689d8d4691d8ee2ea4ccfa0,
-        type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8931669637737515116, guid: b5a383ca9689d8d4691d8ee2ea4ccfa0,
-        type: 3}
-      propertyPath: m_BackGroundColor.b
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
