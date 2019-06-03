@@ -5,6 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     Rigidbody2D body;
+    Animator animator;
+    SpriteRenderer renderer;
 
     float horizontal;
     float vertical;
@@ -15,6 +17,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        renderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -22,6 +26,24 @@ public class Player : MonoBehaviour
         // Gives a value between -1 and 1
         horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
         vertical = Input.GetAxisRaw("Vertical"); // -1 is down
+
+
+        if (horizontal == 0 && vertical == 0)
+        {
+            animator.SetBool("isMoving", false);
+        }
+        else
+        {
+            animator.SetBool("isMoving", true);
+        }
+        if (horizontal < 0)
+        {
+            renderer.flipX = true;
+        }
+        if (horizontal > 0)
+        {
+            renderer.flipX = false;
+        }
     }
 
     void FixedUpdate()
