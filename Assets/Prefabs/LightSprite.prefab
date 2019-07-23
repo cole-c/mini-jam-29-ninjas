@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6100265525522907788}
   m_Layer: 0
   m_Name: LightSprite
-  m_TagString: Untagged
+  m_TagString: InstantDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,10 +67,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1890772035
+  m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 791e687514a5dc641bee4f1fe2516c68, type: 3}
+  m_Sprite: {fileID: 1890446155574468083, guid: 3cb8249f9cdcda646896a948826c7218,
+    type: 3}
   m_Color: {r: 0.9963192, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
